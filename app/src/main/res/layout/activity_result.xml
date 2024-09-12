@@ -25,11 +25,31 @@
         android:textColor="#e91363"
         android:background="#ffeb3b"
         android:textAlignment="center"/>
-    <Button
-        android:id = "@+id/btn_back"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "Back"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id = "@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Back"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id = "@+id/btn_x2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text = "Get square"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id = "@+id/btn_r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text = "Get square root"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 </LinearLayout>

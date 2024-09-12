@@ -2,12 +2,7 @@ package com.example.intentbundle;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.intentbundle.databinding.ActivityResultBinding;
 
@@ -45,6 +40,13 @@ public class ResultActivity extends AppCompatActivity {
         binding.btnBack.setOnClickListener(v -> {
            Intent intent1 = new Intent(ResultActivity.this, MainActivity.class);
            startActivity (intent1);
+        });
+        String result = binding.textResult.getText().toString();
+        binding.btnX2.setOnClickListener(v -> {
+            binding.textResult.setText(String.valueOf(Integer.parseInt(result) * Integer.parseInt(result)));
+        });
+        binding.btnR2.setOnClickListener(v -> {
+            binding.textResult.setText(String.valueOf(Math.sqrt(Integer.parseInt(result))));
         });
     }
 }
